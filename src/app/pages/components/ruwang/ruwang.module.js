@@ -15,7 +15,7 @@
         url: '/ruwang',
         controller: 'ruwangCtrl',
         templateUrl: 'app/pages/components/ruwang/ruwang.html',
-          title: 'Info',
+          title: 'ruwang',
           sidebarMeta: {
             icon: 'ion-ios-pulse',
             order: 100,
