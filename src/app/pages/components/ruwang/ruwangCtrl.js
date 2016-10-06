@@ -5,12 +5,15 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.components.info')
+  angular.module('BlurAdmin.pages.components.ruwang')
       .controller('ruwangCtrl', ruwangCtrl);
 
   /** @ngInject */
-  function ruwangCtrl($scope) {
-    console.log('info');
-    $scope.someinfo = 'info';
+  function ruwangCtrl($scope, Shop) {
+    console.log('ruwang');
+    Shop.get(function(res){
+      console.log(res);
+    })
+    $scope.someinfo = 'ruwang';
   }
 })();
