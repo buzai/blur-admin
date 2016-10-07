@@ -9,7 +9,7 @@
     .config(routeConfig);
 
   /** @ngInject */
-  function routeConfig($stateProvider) {
+  function routeConfig($stateProvider){
     $stateProvider
       .state('components.info', {
         url: '/info',

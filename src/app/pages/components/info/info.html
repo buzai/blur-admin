@@ -1,23 +1,136 @@
 <uib-tabset active="$tabSetStatus.activeTab">
+<!-- ————————————————————代理商简述——————————————————————————————— -->
   <uib-tab heading="代理商简述">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="title">
+          <button ng-click="btn='btn1'" class="btns" ng-class="{Selection:btn=='btn1'}">基本信息</button>
+          <button ng-click="btn='btn2'" class="btns" ng-class="{Selection:btn=='btn2'}">股份构成</button>
+          <button ng-click="btn='btn3'" class="btns" ng-class="{Selection:btn=='btn3'}">关键人员背景</button>
+          <button ng-click="btn='btn4'" class="btns" ng-class="{Selection:btn=='btn4'}">股份股东投资情况</button>
+          <button ng-click="btn='btn5'" class="btns" ng-class="{Selection:btn=='btn5'}">销售维修状况</button>
+          <button ng-click="btn='btn6'" class="btns" ng-class="{Selection:btn=='btn6'}">财务状况</button>
+          <button ng-click="btn='btn7'" class="btns" ng-class="{Selection:btn=='btn7'}">市场情况</button>
+        </div>
+        <div class="info-box" ng-switch="btn">
 
+            <!-- 基本信息开始 -->
+            <form ng-submit="basicInformation(BasicForm)" novalidate name="BasicForm" ng-switch-when="btn1">
+              <div class="form-group">
+                <label class="individual-label">申请公司全称:</label>
+                <input type="text" name="companyName" class="form-control individual-iput" ng-model="agent.companyName"
+                       required placeholder="公司全称"/>
+                <p class="help-block individual-p" ng-show="BasicForm.companyName.$error.required && submitbasic">
+                  请输入公司全称
+                </p>
+              </div>
+              <div class="form-group">
+                <label class="individual-label">目前经营汽车品牌:</label>
+                <input type="text" name="carBrand" class="form-control individual-iput" ng-model="agent.carBrand"
+                       required placeholder="汽车品牌"/>
+                <p class="help-block individual-p" ng-show="BasicForm.carBrand.$error.required && submitbasic">
+                  请输入目前经营汽车品牌
+                </p>
+              </div>
+              <div class="form-group">
+                <label class="individual-label">企业性质:</label>
+                <input type="text" name="nature" class="form-control individual-iput" ng-model="agent.nature"
+                       required placeholder="国有/合资/民营/股份/私有"/>
+                <p class="help-block individual-p" ng-show="BasicForm.nature.$error.required && submitbasic">
+                  请选择企业性质
+                </p>
+              </div>
+              <div class="form-group">
+                <label class="individual-label">成立日期:</label>
+                <input type="text" name="establishDate" class="form-control individual-iput" ng-model="agent.establishDate" required/>
+                <p class="help-block individual-p" ng-show="BasicForm.establishDate.$error.required && submitbasic">
+                  请输入公司成立日期
+                </p>
+              </div>
+              <div class="form-group">
+                <label class="individual-label">注册资本:</label>
+                <input type="number" name="registerCapital" class="form-control individual-iput" ng-model="agent.registerCapital"
+                       required placeholder="注册资本（万），不加单位"/>
+                <p class="help-block individual-p" ng-show="BasicForm.registerCapital.$error.required && submitbasic">
+                  请输入注册资本
+                </p>
+              </div>
+              <div class="form-group">
+                <label class="individual-label">法人代表:</label>
+                <input type="text" name="legalRepresentative" class="form-control individual-iput" ng-model="agent.legalRepresentative" required/>
+                <p class="help-block individual-p" ng-show="BasicForm.legalRepresentative.$error.required && submitbasic">
+                  请输入法人代表
+                </p>
+              </div>
+              <div class="form-group">
+                <label class="individual-label">4s店数量(个):</label>
+                <input type="number" name="shopNumber" class="form-control individual-iput" ng-model="agent.shopNumber"
+                       required placeholder="4s店数量不加单位"/>
+                <p class="help-block individual-p" ng-show="BasicForm.shopNumber.$error.required && submitbasic">
+                  请输入4s店数量
+                </p>
+              </div>
+              <div class="form-group">
+                <label class="individual-label">汽车销售经验(年):</label>
+                <input type="number" name="sellSuffer" class="form-control individual-iput" ng-model="agent.sellSuffer" placeholder="汽车销售经验，不加单位"/>
+              </div>
+              <div class="form-group">
+                <label class="individual-label">汽车售后服务经验(年):</label>
+                <input type="number" name="afterSale" class="form-control individual-iput" ng-model="agent.afterSale"
+                       required placeholder="汽车售后服务经验，不加单位"/>
+                <p class="help-block individual-p" ng-show="BasicForm.afterSale.$error.required && submitbasic">
+                  请输入汽车售后服务经验
+                </p>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary"><i class="fa fa-user-md"></i>提交审核</button>
+              </div>
+            </form>
+            <!--股份构成  -->
+            <form ng-submit="sharesConstitute(SharesForm)" novalidate name="SharesForm" ng-switch-when="btn2">
+                股份构成
+            </form>
+            <!-- 关键人员背景 -->
+            <form ng-submit="backdrop(BackdropForm)" novalidate name="BackdropForm" ng-switch-when="btn3">
+                关键人员背景
+            </form>
+            <!-- 股份股东投资情况 -->
+            <form ng-submit="investment(InvestForm)" novalidate name="InvestForm" ng-switch-when="btn4">
+                股份股东投资情况
+            </form>
+            <!-- 销售维修状况 -->
+            <form ng-submit="maintenance(ServiceForm)" novalidate name="ServiceForm" ng-switch-when="btn5">
+                销售维修状况
+            </form>
+            <!-- 财务状况 -->
+            <form ng-submit="financing(financeForm)" novalidate name="financeForm" ng-switch-when="btn6">
+                财务状况
+            </form>
+            <!-- 市场情况 -->
+            <form ng-submit="marketConditions(marketForm)" novalidate name="marketForm" ng-switch-when="btn7">
+                市场情况
+            </form>
+
+        </div>
+      </div>
+    </div>
 
   </uib-tab>
-
+<!-- —————————————————————拟建店简述——————————————————————————————— -->
   <uib-tab heading="拟建店简述">
 
   </uib-tab>
-
+<!-- —————————————————————拟建店筹备——————————————————————————————— -->
   <uib-tab heading="拟建店筹备">
 
   </uib-tab>
-
+<!-- —————————————————————营销预测分析——————————————————————————————— -->
   <uib-tab heading="营销预测分析">
 
   </uib-tab>
-
+<!-- ——————————————————————相关附件—————————————————————————————— -->
   <uib-tab heading="相关附件">
 
   </uib-tab>
 
-  </uib-tabset>
+</uib-tabset>
