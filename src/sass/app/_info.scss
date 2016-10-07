@@ -1,0 +1,62 @@
+button.Selection{
+	background-color:red;
+  	color:#fff;
+  	border:1px solid transparent;
+  	outline:none;
+}
+#title .btns{
+	display:inline-block;
+	padding:6px 12px;
+	margin-bottom:10px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor:pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	border: 1px solid transparent;
+	border-radius:4px;
+}
+#title .btns:active{
+	border:1px solid transparent;
+	outline:none;
+}
+.info-box{
+	width:100%;
+	border:1px solid #ddd;
+	min-height:400px;
+	border-radius:4px;
+	padding:15px;
+}
+label.individual-label{
+	vertical-align:top;
+	display:inline-block;
+	width:30%;
+	box-sizing:border-box;
+	padding-right:10px;
+	text-align:right;
+	margin-top:8px;
+	margin-left:16px;
+	margin-right:10px;
+	color: #333;
+	font-size:16px;
+	font-weight:600;
+	color:#4d4d4d;
+	text-align:right;
+
+}
+p.individual-p{
+	margin-left:35%;
+	margin-top:8px;
+	color:#FA2700!important;
+}
+input.individual-iput,textarea.individual-iput{
+	display:inline-block;
+	width:50%!important;
+}
