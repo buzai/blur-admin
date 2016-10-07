@@ -10,7 +10,8 @@
     'BlurAdmin.pages.components.timeline',
     'BlurAdmin.pages.components.tree',
     'BlurAdmin.pages.components.info',
-    'BlurAdmin.pages.components.ruwang'
+    'BlurAdmin.pages.components.ruwang',
+    'BlurAdmin.pages.components.progressquery'
 
   ])
       .config(routeConfig);
