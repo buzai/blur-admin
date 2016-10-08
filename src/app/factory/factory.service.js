@@ -15,6 +15,7 @@ angular.module('BlurAdmin')
 
     var obj={};
     obj=$resource('http://127.0.0.1:8080/api/shops');
+    obj.baseinfo=$resource('http://127.0.0.1:8080/api/shops/baseinfo');
     return obj;
 
   }])

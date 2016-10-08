@@ -9,7 +9,7 @@
       .controller('InfoCtrl', InfoCtrl);
 
   /** @ngInject */
-  function InfoCtrl($scope){
+  function InfoCtrl($scope, Shop){
     console.log('info');
     $scope.someinfo = 'info';
     $scope.agent={};
@@ -28,7 +28,11 @@
     		afterSale: $scope.agent.afterSale
 
     	}
-    	console.log(basic);
+    	console.log('basic');
+      Shop.baseinfo.save(basic,function(err, res) {
+        console.log(err);
+        console.log(res);
+      })
     }
     // 股份构成
     $scope.sharesConstitute=function(SharesForm){
@@ -52,7 +56,7 @@
     }
     // 市场情况
     $scope.marketConditions=function(marketForm){
-    		
+
     }
   }
 })();

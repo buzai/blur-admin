@@ -15,7 +15,7 @@
         url: '/info',
         controller: 'InfoCtrl',
         templateUrl: 'app/pages/components/info/info.html',
-          title: 'Info',
+          title: '信息维护',
           sidebarMeta: {
             icon: 'ion-ios-pulse',
             order: 100,
