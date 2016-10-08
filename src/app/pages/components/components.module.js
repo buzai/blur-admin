@@ -11,7 +11,9 @@
     'BlurAdmin.pages.components.tree',
     'BlurAdmin.pages.components.info',
     'BlurAdmin.pages.components.ruwang',
-    'BlurAdmin.pages.components.progressquery'
+    'BlurAdmin.pages.components.progressquery',
+    'BlurAdmin.pages.components.designCheck',
+    'BlurAdmin.pages.components.audit'
 
   ])
       .config(routeConfig);
