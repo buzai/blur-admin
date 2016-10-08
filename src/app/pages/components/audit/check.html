@@ -1,0 +1,38 @@
+
+<div class="widgets">
+  <div class="row">
+    <div class="col-md-12">
+      <div ba-panel ba-panel-title="合作商实地考察结果审核" ba-panel-class="with-scroll">
+        <form>
+          <div class="input-demo radio-demo row">
+            <p>审核结果</p>
+            <div class="col-md-4">
+              <label class="radio-inline custom-radio nowrap">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="no" ng-model="no">
+                <span>审核不通过</span>
+              </label>
+            </div>
+            <div class="col-md-4">
+              <label class="radio-inline custom-radio nowrap">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="yes" ng-model="yes">
+                <span>审核通过</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <p>审核意见</p>
+            <textarea class="form-control" placeholder="审核意见" ng-model="opinion"></textarea>
+          </div>
+          <div class="form-group form-inline" role="form">
+            <p>附件</p>
+            <label class="sr-only" for="inputfile">相关文件上传</label>
+            <input type="file" id="inputfile" ng-model="file">
+          </div>
+          <button type="submit" class="btn btn-danger" ng-click="submit()">提交</button>
+          <button type="submit" class="btn btn-danger" ng-click="cancel()">取消</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

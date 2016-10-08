@@ -1,0 +1,148 @@
+/**
+ * @author v.lugovksy
+ * created on 16.12.2015
+ */
+(function () {
+  'use strict';
+
+  angular.module('BlurAdmin.pages.components.designCheck')
+      .controller('DesignCheckCtrl', DesignCheckCtrl);
+
+  /** @ngInject */
+  function DesignCheckCtrl($scope) {
+    console.log('info');
+     $scope.applicants=[
+    	{
+    		id:1,
+    		area:'北京',
+    		company:'维擎科技',
+    		person:'黎明',
+    		phone:'123456789',
+    		state:'未通过',
+    		date:'20161006',
+    	},
+    	{
+    		id:2,
+    		area:'北京',
+    		company:'维擎科技',
+    		person:'黎明',
+    		phone:'123456789',
+    		state:'未通过',
+    		date:'20161006',
+    	},
+    	{
+    		id:1,
+    		area:'北京',
+    		company:'维擎科技',
+    		person:'黎明',
+    		phone:'123456789',
+    		state:'未通过',
+    		date:'20161006',
+    	},
+    	{
+    		id:3,
+    		area:'北京',
+    		company:'维擎科技',
+    		person:'黎明',
+    		phone:'123456789',
+    		state:'未通过',
+    		date:'20161006',
+    	},
+    	{
+    		id:1,
+    		area:'北京',
+    		company:'维擎科技',
+    		person:'黎明',
+    		phone:'123456789',
+    		state:'未通过',
+    		date:'20161006',
+    	},
+    	{
+    		id:4,
+    		area:'北京',
+    		company:'维擎科技',
+    		person:'黎明',
+    		phone:'123456789',
+    		state:'未通过',
+    		date:'20161006',
+    	},
+    	{
+    		id:5,
+    		area:'北京',
+    		company:'维擎科技',
+    		person:'黎明',
+    		phone:'123456789',
+    		state:'未通过',
+    		date:'20161006',
+    	}
+
+    ]
+
+    $scope.applicants2=[
+    	{
+    		id:1,
+    		area:'北京',
+    		company:'维擎科技',
+    		person:'黎明',
+    		phone:'123456789',
+    		state:'未通过',
+    		date:'20161006',
+    	},
+    	{
+    		id:2,
+    		area:'北京',
+    		company:'维擎科技',
+    		person:'黎明',
+    		phone:'123456789',
+    		state:'未通过',
+    		date:'20161006',
+    	},
+    	{
+    		id:1,
+    		area:'北京',
+    		company:'维擎科技',
+    		person:'黎明',
+    		phone:'123456789',
+    		state:'未通过',
+    		date:'20161006',
+    	},
+    	{
+    		id:3,
+    		area:'北京',
+    		company:'维擎科技',
+    		person:'黎明',
+    		phone:'123456789',
+    		state:'未通过',
+    		date:'20161006',
+    	},
+    	{
+    		id:1,
+    		area:'北京',
+    		company:'维擎科技',
+    		person:'黎明',
+    		phone:'123456789',
+    		state:'未通过',
+    		date:'20161006',
+    	},
+    	{
+    		id:4,
+    		area:'北京',
+    		company:'维擎科技',
+    		person:'黎明',
+    		phone:'123456789',
+    		state:'未通过',
+    		date:'20161006',
+    	},
+    	{
+    		id:5,
+    		area:'北京',
+    		company:'维擎科技',
+    		person:'黎明',
+    		phone:'123456789',
+    		state:'未通过',
+    		date:'20161006',
+    	}
+
+    ]
+  }
+})();
